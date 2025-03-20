@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /cgi-bin/
+Disallow: /auth/
+Disallow: /cancellation/
+Disallow: /contact-us/
+Disallow: /dashboard/
+Disallow: /order-review/
+Disallow: /payments/
+Disallow: /privacy/
+Disallow: /shipping/
+Disallow: /terms/
+Disallow: /unauthorized/
+Sitemap: https://www.ladyish.in/sitemap.xml

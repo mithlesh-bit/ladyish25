@@ -1,0 +1,24 @@
+/* SimpleImageCarousel.module.css */
+.carouselContainer {
+    padding-top: 30%; /* Default aspect ratio for larger screens */
+    position: relative;
+    max-width: 90%;
+    width: 100%;
+    overflow: hidden;
+    margin: auto;
+    border-radius: var(--rounded-lg, 0.5rem); /* Using CSS variable for border-radius */
+}
+
+@media (max-width: 640px) {
+    .carouselContainer {
+        padding-top: 52%; /* Increased height for mobile views */
+        max-width: 99%;
+    }
+    .buttonContainer {
+        padding: 1px 5px; /* Smaller padding for smaller screen */
+        font-size: 10px; /* Smaller font size for smaller screen */
+    }
+    .textContainer{
+        font-size: 14px
+    }
+}
