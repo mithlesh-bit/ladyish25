@@ -917,10 +917,10 @@ const FormDialog = ({ onClose, user, fetchAllAddresses }) => {
   };
 
   // Implementation of closePopup function
-  function closePopup() {
+  // function closePopup() {
     // Assuming you are using a simple CSS style to control visibility
-    document.getElementById("dialogContainer").style.display = "none";
-  }
+    // document.getElementById("dialogContainer").style.display = "none";
+  // }
 
   return (
     <div
