@@ -88,16 +88,14 @@ const OrderReview = () => {
   const [isSdkReady, setIsSdkReady] = useState(false);
 
   useEffect(() => {
-    const sdkUrl = "https://sdk.cashfree.com/js/v3/cashfree.js";
+    if (typeof window === "undefined") return; // Ensures code runs only on the client
 
+    const sdkUrl = "https://sdk.cashfree.com/js/v3/cashfree.js";
     const script = document.createElement("script");
     script.src = sdkUrl;
     script.async = true;
 
-    const handleLoad = () => {
-      setIsSdkReady(true);
-    };
-
+    const handleLoad = () => setIsSdkReady(true);
     const handleError = () => {
       console.error("Failed to load the Cashfree SDK.");
       setIsSdkReady(false);
@@ -107,7 +105,6 @@ const OrderReview = () => {
     script.addEventListener("error", handleError);
     document.body.appendChild(script);
 
-    // Cleanup to remove the script on component unmount
     return () => {
       script.removeEventListener("load", handleLoad);
       script.removeEventListener("error", handleError);
@@ -116,7 +113,6 @@ const OrderReview = () => {
       }
     };
   }, []);
-
 
   const applyCoupon = async (e) => {
     e.preventDefault();
