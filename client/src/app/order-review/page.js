@@ -87,33 +87,11 @@ const OrderReview = () => {
 
   const [isSdkReady, setIsSdkReady] = useState(false);
 
-  // useEffect(() => {
-  //   if (typeof window === "undefined") return; // Ensures code runs only on the client
 
-  //   const sdkUrl = "https://sdk.cashfree.com/js/v3/cashfree.js";
-  //   const script = document.createElement("script");
-  //   script.src = sdkUrl;
-  //   script.async = true;
 
-  //   const handleLoad = () => setIsSdkReady(true);
-  //   const handleError = () => {
-  //     console.error("Failed to load the Cashfree SDK.");
-  //     setIsSdkReady(false);
-  //   };
 
-  //   script.addEventListener("load", handleLoad);
-  //   script.addEventListener("error", handleError);
-  //   document.body.appendChild(script);
 
-  //   return () => {
-  //     script.removeEventListener("load", handleLoad);
-  //     script.removeEventListener("error", handleError);
-  //     if (document.body.contains(script)) {
-  //       document.body.removeChild(script);
-  //     }
-  //   };
-  // }, []);
-
+  
   const applyCoupon = async (e) => {
     e.preventDefault();
     const cartValue = user?.cart?.reduce(
@@ -916,11 +894,7 @@ const FormDialog = ({ onClose, user, fetchAllAddresses }) => {
       });
   };
 
-  // Implementation of closePopup function
-  // function closePopup() {
-    // Assuming you are using a simple CSS style to control visibility
-    // document.getElementById("dialogContainer").style.display = "none";
-  // }
+ 
 
   return (
     <div
